@@ -83,3 +83,11 @@ class AntonymReplacer(object):
 
 class AntonymWordReplacer(WordReplacer, AntonymReplacer):
     pass
+
+
+class CustomSpellingReplacer(SpellingReplacer):
+    def __init__(self, spell_dict, max_dist=2):
+        self.spell_dict = spell_dict
+        self.max_dist = max_dist
+
+
